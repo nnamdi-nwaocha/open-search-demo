@@ -1,0 +1,16 @@
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.14.0
+    environment:
+      discovery.type: single-node
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+      OPENSEARCH_INITIAL_ADMIN_PASSWORD: "ChangeMe_StrongPassword_123!"
+    ports:
+      - "9200:9200"
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+      - ./synonyms.txt:/usr/share/opensearch/config/synonyms.txt:ro
+
+volumes:
+  opensearch-data:
+

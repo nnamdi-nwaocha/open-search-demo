@@ -1,0 +1,33 @@
+{
+    "settings": {
+      "analysis": {
+        "filter": {
+          "my_synonyms": {
+            "type": "synonym_graph",
+            "lenient": true,
+            "synonyms_path": "synonyms.txt"
+          }
+        },
+        "analyzer": {
+          "my_text_analyzer": {
+            "type": "custom",
+            "tokenizer": "standard",
+            "filter": ["lowercase", "stop", "my_synonyms"]
+          }
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "id":         { "type": "keyword" },
+        "title":      { "type": "text", "analyzer": "my_text_analyzer", "fields": { "raw": { "type": "keyword" } }, "index_options":"positions", "term_vector":"with_positions_offsets" },
+        "tags":       { "type": "keyword" },
+        "category":   { "type": "keyword" },
+        "body":       { "type": "text", "analyzer": "my_text_analyzer", "index_options":"positions", "term_vector":"with_positions_offsets" },
+        "publishedAt":{ "type": "date" },
+        "views":      { "type": "integer" },
+        "isFeatured": { "type": "boolean" }
+      }
+    }
+  }
+

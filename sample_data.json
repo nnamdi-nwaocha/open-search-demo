@@ -1,0 +1,13 @@
+{"index":{"_index":"content_v1","_id":"1"}}
+{"id":"1","title":"Getting started with NestJS","tags":["nestjs","api"],"category":"dev","body":"NestJS makes building scalable server-side apps easy.","publishedAt":"2025-01-01","views":1200,"isFeatured":true}
+{"index":{"_index":"content_v1","_id":"2"}}
+{"id":"2","title":"OpenSearch fuzzy matching tips","tags":["opensearch","search"],"category":"search","body":"Configure analyzers, synonyms, and boosts for better relevance.","publishedAt":"2025-02-10","views":800,"isFeatured":false}
+{"index":{"_index":"content_v1","_id":"3"}}
+{"id":"3","title":"AI and Machine Learning Basics","tags":["ai","ml"],"category":"tech","body":"Artificial intelligence is transforming how we build applications.","publishedAt":"2025-03-15","views":1500,"isFeatured":true}
+{"index":{"_index":"content_v1","_id":"4"}}
+{"id":"4","title":"UX Design Principles","tags":["ux","design"],"category":"design","body":"User experience design focuses on creating intuitive interfaces.","publishedAt":"2025-03-20","views":900,"isFeatured":false}
+{"index":{"_index":"content_v1","_id":"5"}}
+{"id":"5","title":"Frontend Development with React","tags":["react","frontend","javascript"],"category":"dev","body":"React provides powerful tools for building modern user interfaces.","publishedAt":"2025-04-01","views":2000,"isFeatured":true}
+{"index":{"_index":"content_v1","_id":"6"}}
+{"id":"6","title":"Database Optimization Techniques","tags":["database","performance","sql"],"category":"backend","body":"Learn how to optimize your database queries for better performance.","publishedAt":"2025-04-15","views":750,"isFeatured":false}
+

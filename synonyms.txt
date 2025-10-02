@@ -1,0 +1,10 @@
+ai, artificial intelligence
+ux, user experience
+ml, machine learning
+react, javascript
+database, db
+frontend, front-end
+backend, back-end
+api, application programming interface
+search, query
+performance, optimization
