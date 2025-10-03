@@ -4,7 +4,7 @@ export type SearchParams = {
     tags?: string[];
     category?: string;
     featured?: boolean;
-    sort?: 'relevance' | 'recent' | 'views';
+    sort?: '_score' | 'recent' | 'views';
     page?: number;
     pageSize?: number;
   };

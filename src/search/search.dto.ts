@@ -23,8 +23,8 @@ export class SearchParamsDTO {
   featured?: boolean;
 
   @IsOptional()
-  @IsIn(['relevance', 'recent', 'views'])
-  sort?: 'relevance' | 'recent' | 'views';
+  @IsIn(['_score', 'recent', 'views'])
+  sort?: '_score' | 'recent' | 'views';
 
   @IsOptional()
   @IsNumber()

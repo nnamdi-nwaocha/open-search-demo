@@ -23,7 +23,7 @@ export class SearchService {
             tags,
             category,
             featured,
-            sort = 'relevance',
+            sort = '_score',
             page = 1,
             pageSize = 10,
           } = params;
@@ -60,7 +60,7 @@ export class SearchService {
           const sortClause =
             sort === 'recent' ? [{ publishedAt: 'desc' }] :
             sort === 'views'  ? [{ views: 'desc' }] :
-                                ['_score'];
+                                [sort];
        
           const size = pageSize ?? 10;
           // Convert page number to OpenSearch offset (from)
@@ -108,7 +108,7 @@ export class SearchService {
         } catch (error) {
           throw new InternalServerErrorException('Search operation failed. Please try again later.');
         }
-      }
+      }    
     
 
     // Upsert document
