@@ -56,6 +56,8 @@ export class SearchService {
           if (tags?.length) filter.push({ terms: { tags } });
           if (category) filter.push({ term: { category } });
           if (featured !== undefined) filter.push({ term: { isFeatured: featured } });
+
+          const query= { bool: { filter, should } };
        
           const sortClause =
             sort === 'recent' ? [{ publishedAt: 'desc' }] :
@@ -66,10 +68,8 @@ export class SearchService {
           // Convert page number to OpenSearch offset (from)
           const from = ((page ?? 1) - 1) * size;
     
-          const queryBody = { bool: { filter, should } };
-    
           const body: Record<string, unknown> = {
-            query: queryBody,
+            query,
             sort: sortClause,
             from,
             size,
