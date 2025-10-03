@@ -18,7 +18,7 @@ export class SearchService {
     async search(params: SearchParams): Promise<SearchResponse> {
         try {
           const {
-            q = '',
+            q,
             phrase,
             tags,
             category,
