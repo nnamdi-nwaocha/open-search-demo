@@ -35,7 +35,7 @@ export class SearchService {
             should.push({
               multi_match: {
                 query: q,
-                fields: ['title^3', 'body', 'tags^2'],
+                fields: ['title^2', 'body'],
                 fuzziness: 'AUTO',
                 operator: 'and',
               },
